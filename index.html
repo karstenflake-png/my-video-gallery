@@ -1,0 +1,116 @@
+<div style="text-align: center; width: 100%; margin: 0 auto;">
+  <!-- Responsive Main Video -->
+  <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0;">
+    <iframe id="mainVideo"
+      src="https://www.youtube.com/embed/5oNUJphCUII"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Thumbnail Gallery -->
+  <div style="margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <div class="thumb" onclick="playVideo('5oNUJphCUII')">
+      <img src="https://img.youtube.com/vi/5oNUJphCUII/0.jpg">
+      <div class="overlay">Flake, Karsten Lane Vocal Reel</div>
+    </div>
+<div class="thumb" onclick="playVideo('2J7TeMk3kvc')">
+      <img src="https://img.youtube.com/vi/2J7TeMk3kvc/0.jpg">
+      <div class="overlay">Flake, Karsten Lane Dance Reel</div>
+    </div>
+    <div class="thumb" onclick="playVideo('w4LI3o3ckLg')">
+      <img src="https://img.youtube.com/vi/w4LI3o3ckLg/0.jpg">
+      <div class="overlay">Falling For The Boy</div>
+    </div>
+    <div class="thumb" onclick="playVideo('Iht_UtHst2k')">
+      <img src="https://img.youtube.com/vi/Iht_UtHst2k/0.jpg">
+      <div class="overlay">I’ll Be Here</div>
+    </div>
+    <div class="thumb" onclick="playVideo('wusBhNwn_FA')">
+      <img src="https://img.youtube.com/vi/wusBhNwn_FA/0.jpg">
+      <div class="overlay">Shy</div>
+    </div>
+    <div class="thumb" onclick="playVideo('nZ-be6UeLe8')">
+      <img src="https://img.youtube.com/vi/nZ-be6UeLe8/0.jpg">
+      <div class="overlay">How Can I Wait</div>
+    </div>
+    <div class="thumb" onclick="playVideo('v9_l84qK2HA')">
+      <img src="https://img.youtube.com/vi/v9_l84qK2HA/0.jpg">
+      <div class="overlay">Gotta Get Out</div>
+    </div>
+    <div class="thumb" onclick="playVideo('eM074MyajEM')">
+      <img src="https://img.youtube.com/vi/eM074MyajEM/0.jpg">
+      <div class="overlay">Femininomenon</div>
+    </div>
+    <div class="thumb" onclick="playVideo('as89xEvxwh8')">
+      <img src="https://img.youtube.com/vi/as89xEvxwh8/0.jpg">
+      <div class="overlay">My Memories Commercial</div>
+    </div>
+  </div>
+
+  <!-- Styles -->
+  <style>
+    .thumb {
+      position: relative;
+      cursor: pointer;
+      width: 30%;
+      max-width: 150px;
+      min-width: 100px;
+    }
+
+    .thumb img {
+      width: 100%;
+      border-radius: 5px;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .thumb:hover img {
+      transform: scale(1.02);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(50, 50, 50, 0.5);
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      border-radius: 5px;
+      transition: opacity 0.3s ease;
+      text-align: center;
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    .thumb:hover .overlay {
+      opacity: 1;
+    }
+
+    @media (max-width: 600px) {
+      .thumb {
+        width: 45%;
+      }
+
+      .overlay {
+        font-size: 10px;
+      }
+    }
+  </style>
+
+  <!-- Script -->
+  <script>
+    function playVideo(videoId) {
+      const mainPlayer = document.getElementById('mainVideo');
+      mainPlayer.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+    }
+  </script>
+</div>
